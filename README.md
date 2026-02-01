@@ -4,7 +4,7 @@ CSC 210: Data Structures
 ## General Information
 Your readme should include the following information. Each student needs to submit all of this information.
 
-Your name:
+Your name: Claire Newcom
 
 Other students you worked with, including TAs:
 
