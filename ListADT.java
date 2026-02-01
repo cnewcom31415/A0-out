@@ -127,7 +127,7 @@ public interface ListADT<T> {
 
     /**
      * Concatanates otherList to the end of this list. Does not account for repeated values.
-     * @param otherList
+     * @param otherList the other list that will be concatenated onto the end of this list.
      * @return the combined list.
      */
     public ListADT<T> listConcat(ListADT<T> otherList);
