@@ -1,9 +1,18 @@
 /**
  * Interface to describe the behavior of a List
  * Author: Claire Newcom cnewcom@smith.edu
+ * 
+ * assume there is a constructor that creates an empty list (just a simple instance of the ListADT class)
+ * [not sure how this would work but also maybe have a constructor that can take in a collection
+ *      and populate a list from that collection]
+ * 
+ * General assumptions about lists:
+ * -Items in the List don't randomly appear or disappear
+ * -Items in the List don't randomly move around (there is an order and it matters)
+ * -Information about each of the elements can be accessed
  */
 public interface ListADT<T> {
-    
+
 
     /**
      * Adds a new item to the end of the list.
@@ -43,7 +52,7 @@ public interface ListADT<T> {
 
     
     /**
-     * Removes the first item from the list.
+     * Removes the first item from the list, shifts all other items down.
      * Throws a runtime exception if the list is empty.
      * @return the item that was removed from the list.
      */
@@ -82,12 +91,10 @@ public interface ListADT<T> {
      */
     public int getIndex(T item);
 
-    //###########################################################
-    // CHECK THIS ONE AGAIN
-    //###########################################################
+
     /**
      * Gets the sublist of items between the specified indices. The start index is inclusive,
-     * the end index is exclusive.
+     * the end index is exclusive. NOTE: Sublist does not modify the original list.
      * Throws a runtime exception if the start index is greater than the end index.
      * Throws a runtime exception if either index does not exist.
      * @param startIndex the index of the first element desired for the sublist (inclusive)
@@ -96,12 +103,10 @@ public interface ListADT<T> {
      */
     public ListADT<T> getSublist(int startIndex, int endIndex);
 
-    //###########################################################
-    // CHECK THIS ONE AGAIN
-    //###########################################################
+
     /**
      * Gets the sublist of items from the start index to the end of the list.
-     * The start index is inclusive
+     * The start index is inclusive. NOTE: Sublist does not modify the original list.
      * Throws a runtime exception if the start index does not exist
      * @param startIndex the index of the first element desired for the sublist (inclusive)
      * @return a sublist of elements from this list from the given index to the end of the list
@@ -111,7 +116,8 @@ public interface ListADT<T> {
 
     /**
      * Sets the value at this index to the new value.
-     * Throws a runtime exception if the index does not exist.
+     * Throws a runtime exception if the index does not exist. 
+     * (this means set will not work on an empty list, nor will it be able to add to the end of a list)
      * @param index the index of the value to be set
      * @param newValue the new value to be set at the specified index
      */
@@ -133,25 +139,6 @@ public interface ListADT<T> {
     public ListADT<T> listConcat(ListADT<T> otherList);
    
    
-    /*
-    Assumptions
-    -Items in the List don't randomly appear or disappear
-    -Items in the List don't randomly move around (there is an order and it matters)
-    -Information about each of the elements can be accessed
-    
-    Methods
-    -add :)
-    -remove :)
-    -removeLast :)
-    -removeFirst :)
-    -size :)
-    -get :)
-    -set :)
-    -isEmpty :)
-    -concat :)
-    
-    
-    */
 
 
 }
