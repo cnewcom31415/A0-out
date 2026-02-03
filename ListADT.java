@@ -3,8 +3,8 @@
  * Author: Claire Newcom cnewcom@smith.edu
  * 
  * assume there is a constructor that creates an empty list (just a simple instance of the ListADT class)
- * [not sure how this would work but also maybe have a constructor that can take in a collection
- *      and populate a list from that collection]
+ * [not sure how this would work but also maybe have a constructor that can take in a collection or another list
+ *      and populate a list from that collection/other list]
  * 
  * General assumptions about lists:
  * -Items in the List don't randomly appear or disappear

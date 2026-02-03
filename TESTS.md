@@ -24,16 +24,16 @@ TESTING add()
 
 TESTING remove()
 
-| testRemoveItemFromEmptyList() | create empty list, create piece of data | remove(data) | n/s | ValueDoesNotExistException or maybe MissingElementException (basically an exception that says that the value is not a part of this list) |
+| testRemoveItemFromEmptyList() | create empty list, create piece of data | remove(data) | n/a | ValueDoesNotExistException or maybe MissingElementException (basically an exception that says that the value is not a part of this list) |
 
 
-| testRemoveItemFromEmptyList2() | create empty list | remove(0) | n/s | IndexOutOfBoundsException |
+| testRemoveItemFromEmptyList2() | create empty list | remove(0) | n/a | IndexOutOfBoundsException |
 
 | testRemoveFromList() | create empty list, create piece of data, add data to list | remove(data) | list is empty, and the method returns the piece of data | n/a |
 
 | testRemoveFromList2() | create empty list, create piece of data, add data to list | remove(0) | list is empty, and the method returns the piece of data at 0 | n/a |
 
-| testRemoveFromListDataDNE() | create empty list, create two pieces of data, add one piece of data to list (data1) | remove(data2) | n/a | ValueDoesNotExistException |
+| testRemoveFromListDataDNE() | create empty list, create two pieces of data, add one piece of data to list (data1) | remove(data2) | n/a | ValueDoesNotExistException or maybe MissingElementException (basically an exception that says that the value is not a part of this list) |
 
 | testRemoveFromListWrongIndex() | create empty list, create piece of data, add data to list | remove(1) | n/a | IndexOutOfBoundsException |
 
@@ -75,7 +75,7 @@ TESTING get()
 
 TESTING getIndex()
 
-| testGetIndexOnEmptyList() | create empty list, create piece of data | getIndex(data1) | n/a | IndexOutOfBoundsException |
+| testGetIndexOnEmptyList() | create empty list, create piece of data | getIndex(data1) | n/a | ValueDoesNotExistException or maybe MissingElementException (basically an exception that says that the value is not a part of this list) |
 
 | testGetIndexSuccessOnList() | create empty list, create data1 and data2, add data1 and data2 to list | getIndex(data1) | 0 | n/a |
 
